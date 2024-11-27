@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     public TMPro.TextMeshProUGUI levelText;
     public static int coinCount;
     public GameObject gameOverUI;
+    public GameObject pauseMenuUI;
     private void Awake()
     {
         coinCount = PlayerPrefs.GetInt("coinCount", 0);
@@ -33,7 +35,29 @@ public class GameManager : MonoBehaviour
         // Reset game state variables
         coinCount = 0;
         GameIsOver = false;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // Re-enable input events
+        InputSystem.EnableDevice(Keyboard.current);
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pauseMenuUI.SetActive(true);
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pauseMenuUI.SetActive(false);
+    }
+    public void Home()
+    {
+        // Unsubscribe from input events
+        InputSystem.DisableDevice(Keyboard.current);
+
+        // Reset game state variables
+        coinCount = 0;
+        GameIsOver = false;
+        SceneManager.LoadScene(0);
         // Re-enable input events
         InputSystem.EnableDevice(Keyboard.current);
     }
