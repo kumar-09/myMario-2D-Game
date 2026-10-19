@@ -6,7 +6,6 @@ A classic platformer game inspired by **Super Mario**, developed using **Unity**
 <video src="Assets/GameDev.mp4" controls width="800">
   Your browser does not support the video tag.
 </video>
----
 
 ## 🎯 Features
 - **Platformer Mechanics**: Smooth running, jumping, and interactions with in-game objects.
