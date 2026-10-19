@@ -2,10 +2,7 @@
 
 A classic platformer game inspired by **Super Mario**, developed using **Unity**. Jump, run, and dodge obstacles as you explore exciting levels filled with challenges and fun!
 ## 🎥 Gameplay Video
-
-<video src="Assets/GameDev.mp4" controls width="800">
-  Your browser does not support the video tag.
-</video>
+[▶️ Watch the gameplay video](Assets/GameDev.mp4)
 
 ## 🎯 Features
 - **Platformer Mechanics**: Smooth running, jumping, and interactions with in-game objects.
