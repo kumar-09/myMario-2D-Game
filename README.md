@@ -23,3 +23,10 @@ A classic platformer game inspired by **Super Mario**, developed using **Unity**
 1. Clone the repository:
    ```bash
    git clone https://github.com/kumar-09/myMario-2D-Game.git
+   ```
+
+---
+
+## 🎬 Gameplay Video
+
+<video src="Assets/GameDev.mp4" controls width="800"></video>
